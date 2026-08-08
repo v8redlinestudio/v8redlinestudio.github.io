@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="UnderSpark: Circuit Defense 개인정보처리방침">
+  <title>UnderSpark 개인정보처리방침</title>
+  <style>
+    :root {
+      --bg: #07111a;
+      --panel: #0d1d29;
+      --panel-2: #112838;
+      --text: #edf7fb;
+      --muted: #a9c0cc;
+      --line: #294758;
+      --accent: #45e0d0;
+      --accent-2: #ffb25b;
+      --max: 980px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 50% 0, #123044 0, var(--bg) 32rem);
+      color: var(--text);
+      font-family: Pretendard, "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+    a { color: var(--accent); }
+    a:hover { color: #86f5e9; }
+    header, main, footer { width: min(calc(100% - 32px), var(--max)); margin-inline: auto; }
+    header { padding: 64px 0 28px; }
+    .eyebrow { color: var(--accent); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 8px 0 12px; font-size: clamp(2rem, 7vw, 3.5rem); line-height: 1.15; letter-spacing: -.04em; }
+    .summary { max-width: 760px; color: var(--muted); font-size: 1.05rem; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .badge { padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: rgba(13, 29, 41, .8); color: var(--muted); }
+    nav, section {
+      margin: 20px 0;
+      padding: clamp(20px, 4vw, 38px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(13, 29, 41, .94);
+      box-shadow: 0 20px 70px rgba(0, 0, 0, .22);
+    }
+    nav h2, section h2 { margin-top: 0; }
+    nav ol { columns: 2; column-gap: 36px; padding-left: 22px; }
+    nav li { break-inside: avoid; margin: 4px 0; }
+    h2 { font-size: clamp(1.35rem, 4vw, 1.8rem); line-height: 1.35; letter-spacing: -.02em; }
+    h3 { margin-top: 28px; color: var(--accent-2); font-size: 1.12rem; }
+    p, ul, ol { margin: 12px 0; }
+    li + li { margin-top: 6px; }
+    .table-wrap { overflow-x: auto; margin: 16px 0; border: 1px solid var(--line); border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; min-width: 720px; background: var(--panel-2); }
+    th, td { padding: 14px 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--accent); background: #0b202d; }
+    tr:last-child td { border-bottom: 0; }
+    .notice { padding: 16px 18px; border-left: 4px solid var(--accent-2); border-radius: 8px; background: rgba(255, 178, 91, .08); }
+    .contact { border-color: #34786f; background: linear-gradient(135deg, rgba(20, 70, 69, .42), rgba(13, 29, 41, .94)); }
+    footer { padding: 24px 0 56px; color: var(--muted); text-align: center; }
+    @media (max-width: 680px) {
+      header { padding-top: 42px; }
+      nav ol { columns: 1; }
+      nav, section { border-radius: 14px; }
+    }
+    @media print {
+      :root { --bg: #fff; --panel: #fff; --panel-2: #fff; --text: #111; --muted: #444; --line: #bbb; --accent: #006b62; --accent-2: #8a4b00; }
+      body { background: #fff; font-size: 11pt; }
+      header { padding-top: 0; }
+      nav { display: none; }
+      section { break-inside: avoid; box-shadow: none; }
+      a { color: #111; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">V8REDLINE STUDIO</div>
+    <h1>UnderSpark<br>개인정보처리방침</h1>
+    <p class="summary">V8REDLINE STUDIO(이하 “운영자”)는 UnderSpark: Circuit Defense 및 관련 서비스 이용자의 개인정보를 보호하고, 「개인정보 보호법」 등 관련 법령에 따라 다음과 같이 개인정보를 처리합니다.</p>
+    <div class="meta" aria-label="문서 정보">
+      <span class="badge">버전 1.0</span>
+      <span class="badge">공고일 2026-08-08</span>
+      <span class="badge">시행일 2026-08-11</span>
+    </div>
+  </header>
+
+  <main>
+    <nav aria-label="목차">
+      <h2>목차</h2>
+      <ol>
+        <li><a href="#items">처리 항목 및 수집 방법</a></li>
+        <li><a href="#purpose">처리 목적</a></li>
+        <li><a href="#retention">보유 및 이용 기간</a></li>
+        <li><a href="#third-party">제3자 제공</a></li>
+        <li><a href="#outsourcing">처리업무 위탁</a></li>
+        <li><a href="#overseas">국외 이전</a></li>
+        <li><a href="#rights">이용자의 권리</a></li>
+        <li><a href="#destruction">파기 절차 및 방법</a></li>
+        <li><a href="#security">안전성 확보조치</a></li>
+        <li><a href="#automatic">자동 수집 및 광고 식별자</a></li>
+        <li><a href="#children">아동의 개인정보</a></li>
+        <li><a href="#officer">개인정보 보호책임자</a></li>
+        <li><a href="#remedy">권익침해 구제방법</a></li>
+        <li><a href="#changes">방침 변경</a></li>
+      </ol>
+    </nav>
+
+    <section id="items">
+      <h2>1. 처리하는 개인정보의 항목 및 수집 방법</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>구분</th><th>처리할 수 있는 항목</th><th>수집 방법</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>계정 및 게임 데이터</td>
+              <td>게스트 계정 식별자, 백엔드 회원 식별자, 게임 진행도, 스테이지 기록, 보유 재화·아이템·노드, 소환·강화·편성, 도감, 미션·출석·시즌 진행, 우편 및 보상 수령 기록</td>
+              <td>앱 실행, 게스트 로그인 및 서비스 이용 과정에서 생성</td>
+            </tr>
+            <tr>
+              <td>서비스 이용 및 분석 정보</td>
+              <td>서비스 이용 시각, 앱 버전, 동기화 상태, 오류 기록, 스테이지 시작·종료, 소환·강화, 광고 요청·결과 등 기능 이용 이벤트, 부정 이용 대응 기록</td>
+              <td>앱 및 백엔드가 자동 생성</td>
+            </tr>
+            <tr>
+              <td>기기 및 네트워크 정보</td>
+              <td>운영체제, 기기 종류·모델, 언어, 앱 버전, 접속 IP 주소, 통신·성능·오류 진단 정보</td>
+              <td>서비스 접속 및 외부 SDK 작동 과정에서 자동 생성</td>
+            </tr>
+            <tr>
+              <td>광고 정보</td>
+              <td>IP 주소 기반 대략적 위치, 앱 실행·탭·동영상 시청 등 제품 상호작용, 광고 ID·앱 세트 ID 등 기기 또는 계정 관련 식별자, 광고 요청·노출·시청 완료·보상 결과, 광고 단위 ID</td>
+              <td>Google Mobile Ads 및 User Messaging Platform SDK를 통해 자동 처리</td>
+            </tr>
+            <tr>
+              <td>광고 보상 서버 검증 정보</td>
+              <td>백엔드 회원 식별자, 광고 지면, 요청 식별자, Google 광고 거래 식별자, 광고 단위, 보상 항목·수량, 콜백 시각 및 검증 결과</td>
+              <td>광고 완료 시 Google 서버와 운영자의 검증 서버 간 전송</td>
+            </tr>
+            <tr>
+              <td>구매 및 복원 정보</td>
+              <td>상품 ID, 앱 마켓 종류, 거래 식별자, 구매 토큰 또는 영수증, 검증 결과, 구매·복원 및 권한 지급 기록</td>
+              <td>Google Play 또는 Apple App Store 구매·복원 과정에서 생성 및 전송</td>
+            </tr>
+            <tr>
+              <td>문의 정보</td>
+              <td>이메일 주소, 문의 내용, 첨부자료 및 답변 기록</td>
+              <td>이용자가 이메일 문의 시 직접 제공</td>
+            </tr>
+            <tr>
+              <td>정책 웹페이지 접속 정보</td>
+              <td>IP 주소, 브라우저·기기 정보, 접속 시각 등 GitHub Pages 운영에 필요한 로그</td>
+              <td>이 페이지 접속 시 GitHub가 자동 처리할 수 있음</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="notice">운영자는 이름, 전화번호, 주소, 연락처 목록, 사진·영상, 정밀 위치 또는 결제카드 원문을 게임 이용의 필수 항목으로 직접 요구하지 않습니다. 앱 마켓이 결제 과정에서 별도로 처리하는 정보에는 해당 앱 마켓의 개인정보처리방침이 적용됩니다.</p>
+    </section>
+
+    <section id="purpose">
+      <h2>2. 개인정보의 처리 목적</h2>
+      <ul>
+        <li>게스트 계정 생성·인증 및 게임 진행 저장·복구·동기화</li>
+        <li>게임 콘텐츠, 도감, 미션, 출석, 시즌, 우편 및 보상 기능 제공</li>
+        <li>구매 확인, 영수증 검증, 상품 지급, 복원 및 중복 지급 방지</li>
+        <li>서비스 안정성 확인, 오류 분석, 품질 개선 및 이용 통계 작성</li>
+        <li>데이터 변조, 중복 보상, 결제 악용 등 비정상 이용 탐지·대응</li>
+        <li>보상형·전면 광고 제공, 개인정보 선택 관리, 광고 성과 측정 및 보상 검증</li>
+        <li>이용자 문의, 권리 행사, 분쟁 및 민원 처리</li>
+      </ul>
+    </section>
+
+    <section id="retention">
+      <h2>3. 개인정보의 처리 및 보유 기간</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>정보</th><th>보유 기간</th></tr></thead>
+          <tbody>
+            <tr><td>계정, 게임 진행 및 운영 분석 정보</td><td>계정·서버 데이터 삭제 요청 처리 또는 서비스 종료 시까지</td></tr>
+            <tr><td>광고 보상 검증 및 부정 이용 대응 기록</td><td>처리일 또는 조치 종료일부터 3년. 분쟁 진행 중이면 종료 시까지</td></tr>
+            <tr><td>문의 및 권리 행사 기록</td><td>처리 완료일부터 3년 또는 관련 분쟁 종료 시까지</td></tr>
+            <tr><td>계약·청약철회 및 대금결제·재화 공급 기록</td><td>관련 법령이 적용되는 경우 5년</td></tr>
+            <tr><td>소비자 불만 또는 분쟁 처리 기록</td><td>관련 법령이 적용되는 경우 3년</td></tr>
+            <tr><td>광고사업자·앱 마켓·웹 호스팅 사업자가 처리하는 정보</td><td>각 사업자의 정책, 계약 및 관계 법령에 따른 기간</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>보유기간이 끝나거나 처리 목적이 달성되면 지체 없이 파기합니다. 법령에 따라 보존해야 하는 정보는 다른 정보와 분리하여 정해진 목적과 기간 내에서만 보관합니다.</p>
+    </section>
+
+    <section id="third-party">
+      <h2>4. 개인정보의 제3자 제공</h2>
+      <p>운영자는 이용자의 별도 동의가 있거나 법령에 근거가 있는 경우를 제외하고 개인정보를 제3자에게 제공하지 않습니다. 광고 및 앱 마켓 구매 과정에서 Google, Apple 또는 광고 기술 제공업체가 독립적으로 정보를 처리하는 경우 해당 사업자의 정책과 서비스 내 개인정보 선택 화면이 적용됩니다.</p>
+    </section>
+
+    <section id="outsourcing">
+      <h2>5. 개인정보 처리업무의 위탁</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>수탁자</th><th>위탁 업무</th><th>보유기간</th></tr></thead>
+          <tbody>
+            <tr><td>주식회사 에이에프아이(AFI, 뒤끝)</td><td>게스트 인증, 게임 서버·데이터베이스 운영, 게임 진행·분석 데이터 저장 및 동기화, 우편·공지·서버 시간, 앱 마켓 영수증 검증 지원</td><td>계정 삭제, 위탁 목적 달성 또는 계약 종료 시까지</td></tr>
+            <tr><td>Google LLC</td><td>광고 개인정보 선택, 광고 제공·측정, 오류 분석, 부정 광고 방지, Android 앱 마켓 구매·복원 처리</td><td>Google의 정책, 계약 또는 법령에서 정한 기간</td></tr>
+            <tr><td>Apple Inc.</td><td>iOS 앱 마켓 구매·복원 및 영수증 처리</td><td>Apple의 정책, 계약 또는 법령에서 정한 기간</td></tr>
+            <tr><td>Cloudflare, Inc.</td><td>보상형 광고 서버 검증 엔드포인트, 거래 중복 방지 데이터베이스 및 보안·접속 로그 운영</td><td>위탁 목적 달성 또는 계약 종료 시까지. 운영자 검증 원장은 제3조 기간 적용</td></tr>
+            <tr><td>GitHub, Inc.</td><td>개인정보처리방침 정적 웹페이지 호스팅 및 보안·접속 로그 운영</td><td>GitHub의 정책, 계약 또는 법령에서 정한 기간</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>운영자는 위탁계약 등을 통해 개인정보가 안전하게 처리되도록 필요한 사항을 정하고 수탁자를 관리·감독합니다. 위탁 내용이나 수탁자가 변경되면 본 방침을 통해 공개합니다.</p>
+    </section>
+
+    <section id="overseas">
+      <h2>6. 개인정보의 국외 이전</h2>
+      <p>광고, 앱 마켓 결제, 광고 보상 검증 및 정책 웹페이지 제공 과정에서 다음과 같이 국외 이전이 발생할 수 있습니다.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>이전받는 자</th><th>이전 국가</th><th>이전 항목·목적</th><th>시점·방법</th><th>보유기간</th></tr></thead>
+          <tbody>
+            <tr><td>Google LLC 및 Google 광고 기술 제공업체</td><td>미국 및 서비스 제공을 위한 데이터센터 소재 국가</td><td>광고 관련 정보, 동의 상태, Android 구매 정보 / 광고 제공·측정·부정행위 방지·구매 처리</td><td>동의 확인, 광고 요청·완료 또는 구매 시 암호화된 네트워크 전송</td><td>Google 및 관련 제공업체의 정책·계약·법령상 기간</td></tr>
+            <tr><td>Apple Inc.</td><td>미국 및 Apple 데이터센터 소재 국가</td><td>iOS 구매·복원 정보 / 구매 처리, 영수증 확인 및 부정행위 방지</td><td>iOS 구매·복원 시 암호화된 네트워크 전송</td><td>Apple의 정책·계약·법령상 기간</td></tr>
+            <tr><td>Cloudflare, Inc.</td><td>미국 및 Cloudflare 글로벌 인프라 소재 국가</td><td>광고 보상 검증 정보, IP 및 보안 로그 / 서명 검증, 중복 지급 방지, 서비스 보안</td><td>광고 완료 및 상태 확인 시 암호화된 네트워크 전송</td><td>제3조 및 Cloudflare 정책에 따른 기간</td></tr>
+            <tr><td>GitHub, Inc.</td><td>미국 및 GitHub 인프라 소재 국가</td><td>정책 웹페이지 접속 정보 / 페이지 제공과 보안</td><td>이 페이지 접속 시 암호화된 네트워크 전송</td><td>GitHub 정책·계약·법령상 기간</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>이용자는 관련 동의 또는 개인정보 선택을 거부하거나 철회할 수 있습니다. 광고 데이터 이전을 거부하면 광고 기능이 제한될 수 있고, 앱 마켓 처리를 거부하면 구매·복원 기능을 이용할 수 없습니다. 정책 웹페이지 접속을 원하지 않는 경우 앱 내 문서를 이용할 수 있습니다. 핵심 게임 이용 가능 여부는 각 기능의 기술적 필요성과 법령상 허용 범위에 따라 결정됩니다.</p>
+    </section>
+
+    <section id="rights">
+      <h2>7. 이용자와 법정대리인의 권리 및 행사 방법</h2>
+      <ol>
+        <li>이용자는 자신의 개인정보에 대해 열람, 정정, 삭제, 처리정지 및 동의 철회를 요청할 수 있습니다.</li>
+        <li>요청은 <a href="mailto:v8redlinestudio@gmail.com">v8redlinestudio@gmail.com</a>으로 접수합니다. 운영자는 요청자의 본인 여부와 법령상 제한 사유를 확인한 후 처리 결과를 알립니다.</li>
+        <li>앱 삭제는 기기의 로컬 데이터만 삭제할 수 있으며, 서버에 저장된 게스트 계정과 게임 데이터는 남을 수 있습니다. 서버 데이터 삭제가 필요한 경우 이메일로 별도 요청해야 합니다.</li>
+        <li>광고 개인정보 선택이 필요한 지역에서는 앱 설정의 “광고 개인정보 선택”을 통해 동의 상태를 확인하거나 변경할 수 있습니다.</li>
+        <li>법정대리인은 관련 법령이 정한 범위에서 아동을 대신하여 권리를 행사할 수 있습니다.</li>
+      </ol>
+    </section>
+
+    <section id="destruction">
+      <h2>8. 개인정보의 파기 절차 및 방법</h2>
+      <p>보유기간이 끝나거나 처리 목적이 달성된 개인정보는 확인 절차를 거쳐 지체 없이 파기합니다. 전자적 파일은 복구 또는 재생하기 어렵도록 삭제하고, 종이 문서가 있는 경우 분쇄하거나 소각합니다. 법령에 따라 보존해야 하는 정보는 별도 분리하여 해당 목적 외로 이용하지 않습니다.</p>
+    </section>
+
+    <section id="security">
+      <h2>9. 개인정보의 안전성 확보조치</h2>
+      <p>운영자는 접근 권한 최소화, 인증정보 보호, 전송구간 암호화, 거래 식별자의 중복 방지, 접근·오류 기록 점검, 보안 업데이트, 개인정보 최소 처리 및 수탁업체 관리 등 합리적인 기술적·관리적 조치를 시행합니다.</p>
+    </section>
+
+    <section id="automatic">
+      <h2>10. 자동 수집 장치 및 광고 식별자</h2>
+      <p>서비스와 외부 SDK는 서비스 제공, 오류 진단, 이용 통계 및 광고 제공을 위해 기기 식별자와 유사한 기술을 사용할 수 있습니다. Google Mobile Ads SDK는 기본적으로 IP 주소, 제품 상호작용, 진단 정보, 광고 ID·앱 세트 ID 등의 기기·계정 식별자를 처리할 수 있습니다.</p>
+      <p>이용자는 Android 또는 iOS의 개인정보·광고 설정에서 광고 식별자를 재설정·삭제하거나 맞춤형 광고 이용을 제한할 수 있습니다. 광고 동의가 필요한 지역에서는 앱 내 “광고 개인정보 선택” 화면을 통해 선택을 변경할 수 있습니다.</p>
+      <p>참고: <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads SDK 데이터 공개 안내</a>, <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a></p>
+    </section>
+
+    <section id="children">
+      <h2>11. 아동의 개인정보</h2>
+      <p>서비스는 만 14세 미만 아동을 주된 대상으로 하지 않으며, 운영자는 법정대리인의 동의가 필요한 개인정보를 그 동의 없이 의도적으로 수집하지 않습니다. 만 14세 미만 아동의 개인정보가 적법한 동의 없이 처리된 사실을 확인하면 필요한 확인 후 지체 없이 삭제합니다.</p>
+    </section>
+
+    <section id="officer" class="contact">
+      <h2>12. 개인정보 보호책임자</h2>
+      <ul>
+        <li><strong>책임자:</strong> 석혜린</li>
+        <li><strong>운영자:</strong> V8REDLINE STUDIO</li>
+        <li><strong>문의:</strong> <a href="mailto:v8redlinestudio@gmail.com">v8redlinestudio@gmail.com</a></li>
+      </ul>
+      <p>개인정보 처리, 권리 행사 및 피해 구제에 관한 문의는 위 연락처로 접수할 수 있습니다.</p>
+    </section>
+
+    <section id="remedy">
+      <h2>13. 권익침해 구제방법</h2>
+      <p>개인정보 침해에 대한 상담 또는 신고가 필요한 경우 다음 기관에 도움을 요청할 수 있습니다.</p>
+      <ul>
+        <li>개인정보침해신고센터: 국번 없이 118, <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a></li>
+        <li>개인정보분쟁조정위원회: 1833-6972, <a href="https://www.kopico.go.kr">www.kopico.go.kr</a></li>
+        <li>개인정보보호위원회: <a href="https://www.pipc.go.kr">www.pipc.go.kr</a></li>
+        <li>경찰청 사이버범죄 신고시스템: 국번 없이 182, <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a></li>
+      </ul>
+    </section>
+
+    <section id="changes">
+      <h2>14. 개인정보처리방침의 변경</h2>
+      <p>본 방침을 변경하는 경우 적용일과 주요 변경 내용을 적용일 7일 전부터 서비스 또는 이 페이지에 공지합니다. 이용자 권리에 중대한 변경은 적용일 30일 전부터 공지하며, 법령상 필요한 경우 별도의 동의를 받습니다.</p>
+      <ul>
+        <li>공고일: 2026년 8월 8일</li>
+        <li>시행일: 2026년 8월 11일</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 V8REDLINE STUDIO. UnderSpark: Circuit Defense.</p>
+    <p><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 개인정보처리방침</a> · <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 개인정보처리방침</a> · <a href="https://www.apple.com/kr/legal/privacy/">Apple 개인정보처리방침</a></p>
+  </footer>
+</body>
+</html>
