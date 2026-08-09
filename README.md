@@ -2,7 +2,8 @@
 
 UnderSpark: Circuit Defense의 공개 개인정보처리방침 정적 사이트입니다.
 
-- 공개 문서: `index.html`
+- 한국어 공개 문서: `index.html`
+- English Privacy Policy: `en/index.html`
 - 운영자: V8REDLINE STUDIO
 - 문의: v8redlinestudio@gmail.com
 - 버전: 1.0
