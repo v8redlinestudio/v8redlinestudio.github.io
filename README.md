@@ -5,6 +5,9 @@ UnderSpark: Circuit Defense의 공개 개인정보처리방침 정적 사이트�
 - 한국어 공개 문서: `index.html`
 - English Privacy Policy: `en/index.html`
 - 운영자: V8REDLINE STUDIO
+- 대표자: 석혜린
+- 사업자등록번호: 230-16-03012
+- 주소: 경기도 광명시 도덕공원로 59
 - 문의: v8redlinestudio@gmail.com
 - 버전: 1.0
 - 시행일: 2026-08-11
