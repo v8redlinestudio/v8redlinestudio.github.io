@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>625 디펜스 모집 확률정보</title>
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;self&#x27; &#x27;sha256-Ze/nbKZnnpuOjr88Syh1LjLd1+i5OTQg2duLnyT1Acw=&#x27;; connect-src &#x27;self&#x27;; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;self&#x27;"></head>
+<body>
+  <main>
+    <nav aria-label="언어"><span aria-current="page">한국어</span> · <a href="/625-defence/probability/index.en.html" lang="en">English</a></nav>
+    <h1>625 디펜스 모집 확률정보</h1>
+    <p role="status">모집 기능은 아직 제공되지 않습니다. 아래는 출시 예정 확률표이며, 실제 제공 일정은 별도로 안내합니다.</p>
+    <p id="revision">확률정보를 불러오는 중입니다.</p>
+    <table>
+      <thead><tr><th>카드 ID</th><th>등급</th><th>상시</th><th>특별</th></tr></thead>
+      <tbody id="cards"></tbody>
+    </table>
+    <h2>보장 규칙</h2>
+    <p id="guarantee"></p>
+    <h2>변경 이력</h2>
+    <ol id="history"></ol>
+  </main>
+  <script>
+    // Deployment copies the repository's single StreamingAssets JSON to this public route.
+    const canonicalSource = '/probability/recruit-probability-launch-001.json';
+    fetch(canonicalSource, {cache: 'no-store'}).then(r => {
+      if (!r.ok) throw new Error('probability source unavailable');
+      return r.json();
+    }).then(data => {
+      if (data.guarantees.tenPull.condition !== 'If all ten base tier rolls are Standard, slot 10 is upgraded to Specialized.')
+        throw new Error('unsupported guarantee revision');
+      document.getElementById('revision').textContent = `${data.revisionId} · 확률표 기준일 ${data.effectiveFromUtc}`;
+      document.getElementById('cards').replaceChildren(...data.cards.map(card => {
+        const row = document.createElement('tr');
+        for (const value of [card.cardId, ({Standard: '표준', Specialized: '특화', Elite: '정예'})[card.tier], `${card.standardBannerBasisPoints / 100}%`, `${card.featuredBannerBasisPoints / 100}%`]) {
+          const cell = document.createElement('td'); cell.textContent = value; row.appendChild(cell);
+        }
+        return row;
+      }));
+      document.getElementById('guarantee').textContent =
+        `10회 모집의 기본 등급 추첨이 모두 표준이면 마지막 카드를 특화 등급으로 보장합니다. ` +
+        `보장 슬롯의 SR 4종은 각 ${data.guarantees.tenPull.perSpecializedCardBasisPoints / 100}%입니다. ` +
+        `SSR 천장 ${data.guarantees.globalElitePity}회, 특별 SSR 비중 ${data.guarantees.featuredEliteShareBasisPoints / 100}%.`;
+      document.getElementById('history').replaceChildren(...data.changeHistory.map(item => {
+        const li = document.createElement('li'); li.textContent = `${item.effectiveFromUtc} · ${item.revisionId} · ${item.summaryKo}`; return li;
+      }));
+    }).catch(() => { document.getElementById('revision').textContent = '확률정보를 확인할 수 없습니다. 나중에 다시 확인해 주세요.'; });
+  </script>
+</body>
+</html>

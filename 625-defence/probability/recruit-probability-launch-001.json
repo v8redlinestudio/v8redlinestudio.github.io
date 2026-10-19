@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "revisionId": "PT-LAUNCH-001",
+  "effectiveFromUtc": "2026-08-22T00:00:00Z",
+  "publishedAtUtc": "2026-08-28T00:00:00Z",
+  "tierBasisPoints": { "standard": 7600, "specialized": 2000, "elite": 400, "total": 10000 },
+  "cards": [
+    { "cardId": "REC_R_RIFLE_MOBILE", "tier": "Standard", "standardBannerBasisPoints": 760, "featuredBannerBasisPoints": 760 },
+    { "cardId": "REC_R_RIFLE_HOLD", "tier": "Standard", "standardBannerBasisPoints": 760, "featuredBannerBasisPoints": 760 },
+    { "cardId": "REC_R_MG_SUSTAIN", "tier": "Standard", "standardBannerBasisPoints": 760, "featuredBannerBasisPoints": 760 },
+    { "cardId": "REC_R_MG_CROSS", "tier": "Standard", "standardBannerBasisPoints": 760, "featuredBannerBasisPoints": 760 },
+    { "cardId": "REC_R_AT_AMBUSH", "tier": "Standard", "standardBannerBasisPoints": 760, "featuredBannerBasisPoints": 760 },
+    { "cardId": "REC_R_AT_RAPID", "tier": "Standard", "standardBannerBasisPoints": 760, "featuredBannerBasisPoints": 760 },
+    { "cardId": "REC_R_MORTAR_WIDE", "tier": "Standard", "standardBannerBasisPoints": 760, "featuredBannerBasisPoints": 760 },
+    { "cardId": "REC_R_MORTAR_DELAY", "tier": "Standard", "standardBannerBasisPoints": 760, "featuredBannerBasisPoints": 760 },
+    { "cardId": "REC_R_ENGINEER_FORT", "tier": "Standard", "standardBannerBasisPoints": 760, "featuredBannerBasisPoints": 760 },
+    { "cardId": "REC_R_OBSERVER_RELAY", "tier": "Standard", "standardBannerBasisPoints": 760, "featuredBannerBasisPoints": 760 },
+    { "cardId": "REC_SR_MOBILE_SCREEN", "tier": "Specialized", "standardBannerBasisPoints": 500, "featuredBannerBasisPoints": 500 },
+    { "cardId": "REC_SR_DEFENSE_FIRE", "tier": "Specialized", "standardBannerBasisPoints": 500, "featuredBannerBasisPoints": 500 },
+    { "cardId": "REC_SR_AT_NET", "tier": "Specialized", "standardBannerBasisPoints": 500, "featuredBannerBasisPoints": 500 },
+    { "cardId": "REC_SR_FIELD_LOGISTICS", "tier": "Specialized", "standardBannerBasisPoints": 500, "featuredBannerBasisPoints": 500 },
+    { "cardId": "REC_SSR_REARGUARD", "tier": "Elite", "standardBannerBasisPoints": 100, "featuredBannerBasisPoints": 160 },
+    { "cardId": "REC_SSR_DEPTH_DEFENSE", "tier": "Elite", "standardBannerBasisPoints": 100, "featuredBannerBasisPoints": 80 },
+    { "cardId": "REC_SSR_MOBILE_RESERVE", "tier": "Elite", "standardBannerBasisPoints": 100, "featuredBannerBasisPoints": 80 },
+    { "cardId": "REC_SSR_SUPPLY_LINE", "tier": "Elite", "standardBannerBasisPoints": 100, "featuredBannerBasisPoints": 80 }
+  ],
+  "guarantees": {
+    "tenPull": {
+      "condition": "If all ten base tier rolls are Standard, slot 10 is upgraded to Specialized.",
+      "forcedTier": "Specialized",
+      "cardSelection": "Uniform across the four Specialized cards.",
+      "perSpecializedCardBasisPoints": 2500
+    },
+    "globalElitePity": 60,
+    "featuredEliteShareBasisPoints": 4000,
+    "featuredMissGuarantee": true,
+    "recruitTokenExchange": 120,
+    "pityCarriesAcrossBanners": true,
+    "featuredGuaranteeCarriesAcrossFeaturedBanners": true
+  },
+  "changeHistory": [
+    {
+      "revisionId": "PT-LAUNCH-001",
+      "effectiveFromUtc": "2026-08-22T00:00:00Z",
+      "status": "launch-locked",
+      "summaryKo": "출시 18종과 R 76%·SR 20%·SSR 4%, 특별 픽업 1.6%를 최초 고정"
+    }
+  ]
+}

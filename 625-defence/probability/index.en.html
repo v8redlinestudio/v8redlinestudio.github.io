@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>625 Defence recruitment rates</title>
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;self&#x27; &#x27;sha256-FoI274YiqXhOPaSTcka+dveMOuziHLhikpN0Stf+fLw=&#x27;; connect-src &#x27;self&#x27;; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;self&#x27;"></head>
+<body>
+  <main>
+    <nav aria-label="Language"><a href="/625-defence/probability/index.html" lang="ko">한국어</a> · <span aria-current="page">English</span></nav>
+    <h1>625 Defence recruitment rates</h1>
+    <p role="status">Recruitment is not available yet. This is the planned launch probability table; availability will be announced separately.</p>
+    <p id="revision">Loading recruitment rates.</p>
+    <table>
+      <thead><tr><th>Card ID</th><th>Tier</th><th>Standard</th><th>Featured</th></tr></thead>
+      <tbody id="cards"></tbody>
+    </table>
+    <h2>Guarantees</h2>
+    <p id="guarantee"></p>
+    <h2>Revision history</h2>
+    <ol id="history"></ol>
+  </main>
+  <script>
+    // Deployment copies the repository's single StreamingAssets JSON to this public route.
+    const canonicalSource = '/probability/recruit-probability-launch-001.json';
+    fetch(canonicalSource, {cache: 'no-store'}).then(r => {
+      if (!r.ok) throw new Error('probability source unavailable');
+      return r.json();
+    }).then(data => {
+      document.getElementById('revision').textContent = `${data.revisionId} · Table basis date ${data.effectiveFromUtc}`;
+      document.getElementById('cards').replaceChildren(...data.cards.map(card => {
+        const row = document.createElement('tr');
+        for (const value of [card.cardId, card.tier, `${card.standardBannerBasisPoints / 100}%`, `${card.featuredBannerBasisPoints / 100}%`]) {
+          const cell = document.createElement('td'); cell.textContent = value; row.appendChild(cell);
+        }
+        return row;
+      }));
+      document.getElementById('guarantee').textContent =
+        `10 recruits: ${data.guarantees.tenPull.condition} ` +
+        `Each of the four SR cards has a ${data.guarantees.tenPull.perSpecializedCardBasisPoints / 100}% chance in the guaranteed slot. ` +
+        `SSR guarantee at ${data.guarantees.globalElitePity} recruits; featured SSR share ${data.guarantees.featuredEliteShareBasisPoints / 100}%.`;
+      document.getElementById('history').replaceChildren(...data.changeHistory.map(item => {
+        const li = document.createElement('li'); li.textContent = `${item.effectiveFromUtc} · ${item.revisionId} · ${item.revisionId === "PT-LAUNCH-001" ? "Initial lock: 18 launch cards; R 76%, SR 20%, SSR 4%; featured pickup 1.6%." : (item.summaryEn || "English revision summary unavailable.")}`; return li;
+      }));
+    }).catch(() => { document.getElementById('revision').textContent = 'Recruitment rates could not be verified. Please try again later.'; });
+  </script>
+</body>
+</html>
